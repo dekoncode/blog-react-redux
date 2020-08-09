@@ -16,7 +16,7 @@ export function fetchEditPost(body) {
 
         dispatch(fetchEditpostStart())
 
-        fetch("https://bloggy-api.herokuapp.com/posts/1", requestOptions)
+        fetch("https://bloggy-api.herokuapp.com/posts/" + body.id, requestOptions)
         .then(response => response.text())
         .then(result => fetchEditpostSuccess(result))
         .catch(error => fetchEditpostFailed(error));
