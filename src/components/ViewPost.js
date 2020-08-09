@@ -45,14 +45,14 @@ const ViewPost = ({currentPost, match, fetchGetPost, fetchAddComment}) => {
                 {
                 currentPost.post.comments &&
                 currentPost.post.comments.map((comment) => (    
-                        <ListGroupItem key={comment.id}>
+                        <ListGroupItem key={comment.id} className="mt-1">
                             <p>{comment.body}</p>
                         </ListGroupItem>    
                 ))}
                 </ListGroup>   
                     <Form onSubmit={onSubmit}>
-                    <Input onChange={onChange} value={comment}></Input>
-                    <Button> New comment</Button>
+                    <Input onChange={onChange} value={comment} className="mt-2"></Input>
+                    <Button className="mt-1"> New comment</Button>
                     </Form>
                 </Container>
                 </Fragment>

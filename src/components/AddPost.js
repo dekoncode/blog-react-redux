@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
-import { fetchAddPost } from '../api/add-post'
+import { fetchAddPost } from '../api/add-post';
 import {
     Form,
     FormGroup,
@@ -12,8 +12,8 @@ import {
 
 const AddPost = ({fetchAddPost}) => {
     const history = useHistory();
-    const [body, setBody] = useState(null);
-    const [title, setTitle] = useState(null);
+    const [body, setBody] = useState('');
+    const [title, setTitle] = useState('');
     
     const onSubmit = (event) => {
         event.preventDefault();
@@ -47,9 +47,8 @@ const AddPost = ({fetchAddPost}) => {
     )
 }
 
-const mapStateToProps = () => {};
 const mapDispatchToProps = dispatch => ({
     fetchAddPost: (newPost) => {dispatch(fetchAddPost(newPost))}
   })
   
-export default connect(mapStateToProps, mapDispatchToProps)(AddPost)
+export default connect(null, mapDispatchToProps)(AddPost)
