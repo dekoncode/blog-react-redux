@@ -21,7 +21,7 @@ dispatch(fetchAddpostStart());
 
 fetch("https://bloggy-api.herokuapp.com/posts", requestOptions)
   .then(response => response.json())
-  .then(result => {console.log(result);dispatch(fetchAddpostSuccess(result));})
-  .catch(error => {dispatch(fetchAddpostFailed(error)); console.log(error)})
+  .then(result => {dispatch(fetchAddpostSuccess(result))})
+  .catch(error => {dispatch(fetchAddpostFailed(error))})
 
 }}

@@ -21,7 +21,6 @@ const AddPost = ({fetchAddPost}) => {
             body,
             title
         }
-        console.log(newPost)
         fetchAddPost(newPost);
         history.push('/');
     }

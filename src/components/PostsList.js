@@ -15,7 +15,6 @@ const PostsList = ({postList, fetchPostsList, fetchDeleteList}) => {
     useEffect(() => {
         fetchPostsList();
     },[fetchPostsList])
-    console.log(postList)
     return (
         <ListGroup className="mt-4">
          {postList.loading && <span>Loading...</span>}

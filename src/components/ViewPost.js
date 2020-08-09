@@ -1,4 +1,5 @@
 import React, { useEffect, useState, Fragment } from 'react';
+import { Header } from './Header'
 import { connect } from 'react-redux'
 import { fetchGetPost } from '../api/get-post'
 import { fetchAddComment } from '../api/add-comment'
@@ -28,14 +29,13 @@ const ViewPost = ({currentPost, match, fetchGetPost, fetchAddComment}) => {
     const onChange = (e) => {
         setComment(e.target.value)
     }
-
-    console.log(currentPost.post)
     
     return (
         <div>
             {currentPost.loading && 'Loading...' }
             {currentPost.post && (
                 <Fragment>
+                <Header />
                 <Container>
                     <h1>{currentPost.post.title}</h1>
                     <p>{currentPost.post.body}</p>
