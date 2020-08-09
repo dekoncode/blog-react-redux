@@ -1,6 +1,6 @@
 # blog-react-redux
 
-To run my solution u need put next commands in command line:
+To run my solution you need to run the next commands in command line:
 
 npm i
 
